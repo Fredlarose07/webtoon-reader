@@ -25,7 +25,7 @@
   border-radius: 12px;
   width: 100%;
   height: 92%;
-  max-width: calc(100% - 40px); /* margin 20px de chaque côté */
+  max-width: calc(100% - 40px);
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -37,14 +37,73 @@
 .card {
   grid-column: 1 / 5;
   width: 100%;
-  height: 100%; /* Prend toute la hauteur */
+  height: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 .card img {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover; /* Remplit en hauteur ET largeur */
+  object-fit: cover;
   object-position: center;
 }
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 48px 24px 96px 24px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.774) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.25) 75%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(20px);
+  mask-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 40%,
+    rgba(0, 0, 0, 0.9) 70%,
+    rgba(0, 0, 0, 0.5) 90%,
+    rgba(0, 0, 0, 0.623) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 40%,
+    rgba(0, 0, 0, 0.9) 70%,
+    rgba(0, 0, 0, 0.5) 90%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.card-title {
+  font-family: 'marbold', 'Arial Black', sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.card-description {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  opacity: 0.9;
+  color: #E3E3E3;
+}
+
 

@@ -1,9 +1,12 @@
+import { useNavigate } from 'react-router-dom'
 import './OeuvrePage.css'
 import originalImg from '../../assets/images/il-faut-flinguer-ramirez 3.png'
 import cardImg from '../../assets/images/il-faut-flinguer-ramirez 3.png'
 
 
 const OeuvrePage = () => {
+    const navigate = useNavigate()
+
     return (
         <>
             <section className="oeuvre-section">
@@ -15,6 +18,16 @@ const OeuvrePage = () => {
                 <div className="container">
                     <div className="card">
                         <img src={cardImg} alt="Card" />
+                        
+                        <div className="card-overlay">
+                            <h1 className="card-title">SAMBA-12</h1>
+                            <p className="card-description">
+                                Qorem ipsum dm dolor sit arnet, consectetu olor sit arnet, 
+                                consectetu adipiscing elit. Qorem ipsum dolor sit arnet, 
+                                consectetu Qorem ipsum dolor sit arnet, consectetu
+                            </p>
+                            
+                        </div>
                     </div>
                 </div>
             </section>
