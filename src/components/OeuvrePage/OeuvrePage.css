@@ -15,8 +15,8 @@
   height: 100%;
   background-size: cover;
   background-position: center;
-  filter: blur(50px);
-  opacity: 60%;
+  filter: blur(30px);
+  opacity: 20%;
 }
 
 .container {
@@ -25,7 +25,7 @@
   border-radius: 12px;
   width: 100%;
   height: 92%;
-  max-width: calc(100% - 40px);
+  max-width: min(calc(100% - 40px), 1400px); /* Limite à 1280px */
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -55,7 +55,7 @@
   top: 0;
   left: 0;
   right: 0;
-  padding: 48px 24px 96px 24px;
+  padding: 32px 24px 96px 24px;
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0.774) 0%,
@@ -63,7 +63,7 @@
     rgba(0, 0, 0, 0.25) 75%,
     rgba(0, 0, 0, 0) 100%
   );
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   mask-image: linear-gradient(
     180deg,
@@ -71,7 +71,7 @@
     rgba(0, 0, 0, 1) 40%,
     rgba(0, 0, 0, 0.9) 70%,
     rgba(0, 0, 0, 0.5) 90%,
-    rgba(0, 0, 0, 0.623) 100%
+    rgba(0, 0, 0, 0) 100%
   );
   -webkit-mask-image: linear-gradient(
     180deg,
@@ -99,7 +99,7 @@
 }
 
 .card-description {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.6;
   margin-bottom: 24px;
   opacity: 0.9;
