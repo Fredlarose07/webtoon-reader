@@ -1,16 +1,97 @@
 .webtoon-reader {
   min-height: 100vh;
-  background: #0f1117;
-  color: white;
-  padding: 20px;
+  background: #0a0a0a;
 }
 
-.webtoon-reader button {
+.reader-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #0a0a0acc;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.back-button {
   padding: 10px 20px;
-  background: #667eea;
+  background: rgba(255, 255, 255, 0.1);
   color: white;
-  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
   cursor: pointer;
-  margin-bottom: 20px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.reader-container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 24px 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.reader-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* ------------------ */
+
+.end-card {
+  margin: 40px 20px;
+  padding: 60px 24px;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.end-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.end-subtitle {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 24px;
+}
+
+.end-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 32px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.end-button {
+  padding: 14px 48px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #121010;
+  border: none;
+  border-radius: 32px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.end-button:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-2px);
 }
